@@ -31,6 +31,7 @@ export const useProvideAlbum = () => {
       const response = await addAlbums(title, userId);
       if (response.success) {
         // console.log("This is the response", response);
+        response.data.id = Albums.length + 1;
         setAlbums([response.data, ...Albums]);
       }
 
