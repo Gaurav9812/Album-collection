@@ -22,6 +22,7 @@ function Table(props) {
             </td>
             <td>
               <button
+                className="delete-btn"
                 onClick={() => {
                   props.delete(album.id);
                 }}
@@ -31,6 +32,7 @@ function Table(props) {
             </td>
             <td>
               <button
+                className="edit-btn"
                 onClick={() => {
                   props.edit(album);
                 }}

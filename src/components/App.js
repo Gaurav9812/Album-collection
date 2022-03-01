@@ -58,6 +58,12 @@ function App() {
 
   const EditAlbum = (e) => {
     e.preventDefault();
+    if (Content === "" || userId === "") {
+      addToast("Field Cannot Be empty", {
+        appearance: "error",
+      });
+      return;
+    }
     albumsC.editAlbum(Content, userId, Id);
   };
   //to close form

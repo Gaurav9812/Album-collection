@@ -54,6 +54,7 @@ code {
   border: 0;
   background: red;
   opacity: 0.6;
+  border-radius: 9px;
   color: aliceblue;
   font-weight: bolder;
   letter-spacing: 3px;
@@ -84,4 +85,18 @@ form label {
 }
 form label input {
   margin-left: 15px;
+}
+.delete-btn {
+  border: 0;
+  background-color: darkred;
+  color: wheat;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+.edit-btn {
+  border: 0;
+  background: blueviolet;
+  color: yellowgreen;
+  border-radius: 6px;
+  opacity: 0.9;
 }
