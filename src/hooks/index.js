@@ -10,6 +10,7 @@ export const useProvideAlbum = () => {
   console.log("hemlo");
   const [Albums, setAlbums] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [id, setId] = useState(101);
   const { addToast } = useToasts();
 
   useEffect(() => {
@@ -31,7 +32,8 @@ export const useProvideAlbum = () => {
       const response = await addAlbums(title, userId);
       if (response.success) {
         // console.log("This is the response", response);
-        response.data.id = Albums.length + 1;
+        response.data.id = id;
+        setId(id + 1);
         setAlbums([response.data, ...Albums]);
       }
 
