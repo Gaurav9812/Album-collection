@@ -46,6 +46,7 @@ export const useProvideAlbum = () => {
     setLoading(true);
     const deAlbum = async () => {
       const response = await deleteAlbum();
+      console.log(response);
       if (response.success) {
         // console.log("This is the response", response);
         let newAlbum = Albums.filter((al) => al.id !== Id);
@@ -62,7 +63,10 @@ export const useProvideAlbum = () => {
   const editAlbum = (content, userId, Id) => {
     setLoading(true);
     const deAlbum = async () => {
-      const response = await editAlbums(content, userId, Id);
+      const response = {};
+      response.success = true;
+      if (Id <= 100) response = await editAlbums(content, userId, Id);
+      console.log(response);
       if (response.success) {
         // console.log("This is the response", response);
         let newAlbum = Albums.map((album) => {
