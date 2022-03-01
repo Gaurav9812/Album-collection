@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { ToastProvider } from "react-toast-notifications";
+
+import App from "./components/App";
+import { AlbumProvider } from "./providers/albumProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToastProvider autoDismiss autoDismissTimeout={5000} placement="top-left">
+      <AlbumProvider>
+        <App />
+      </AlbumProvider>
+    </ToastProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

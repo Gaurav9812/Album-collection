@@ -1,13 +1,87 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#ffecd2, #fcb69f);
+  background-size: contain;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/* LOADER */
+.app-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #d6d6d6;
+  border-radius: 50%;
+  border-top-color: #6200ee;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  margin-right: 10px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App > h1 {
+  text-shadow: 6px 1px 8px red;
+  color: indianred;
+}
+.App > button {
+  margin: 13px;
+  padding: 6px 19px;
+  border: 0;
+  background: red;
+  opacity: 0.6;
+  color: aliceblue;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+}
+#Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border: 2px solid;
+  padding: 17px;
+  margin: 12px;
+  box-shadow: 0px 0px 33px indianred;
+}
+#Form > button {
+  border: 0;
+  background: transparent;
+}
+#Form > button > img {
+  width: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  padding: 24px;
+}
+form label input {
+  margin-left: 15px;
 }
